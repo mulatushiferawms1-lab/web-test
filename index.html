@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiro AI - Intelligent Solutions for Tomorrow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Kiro AI</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Apply</a></li>
+                <li><a href="#status" onclick="showStatusCheck()">Check Status</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Kiro AI</h1>
+            <p class="hero-subtitle">Intelligent Solutions for Tomorrow's Challenges</p>
+            <button class="cta-button" onclick="scrollToSection('contact')">Apply Now</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Kiro AI</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Kiro AI represents the future of artificial intelligence, combining cutting-edge technology with human-centered design. Our mission is to create intelligent solutions that enhance human capabilities and solve complex problems across industries.</p>
+                    <p>Founded on principles of innovation, ethics, and excellence, we develop AI systems that are not just powerful, but also responsible and accessible to everyone.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Team Members</p>
+                    </div>
+                    <div class="stat">
+                        <h3>25+</h3>
+                        <p>Countries Served</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Development</h3>
+                    <p>Custom AI solutions tailored to your business needs, from machine learning models to intelligent automation systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <h3>Innovation Consulting</h3>
+                    <p>Strategic guidance on implementing AI technologies to transform your business processes and drive growth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Research & Development</h3>
+                    <p>Cutting-edge research in artificial intelligence, pushing the boundaries of what's possible in technology.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>AI Training</h3>
+                    <p>Comprehensive training programs to help your team understand and leverage AI technologies effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Application Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Join Kiro AI</h2>
+                <div class="section-line"></div>
+                <p>Ready to be part of the AI revolution? Apply to join our team of innovators.</p>
+            </div>
+            <form id="applicationForm" class="application-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" name="age" min="18" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Why do you want to join Kiro AI? *</label>
+                    <textarea id="reason" name="reason" rows="5" required placeholder="Tell us about your passion for AI and what you hope to contribute..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Upload Resume (Optional)</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                </div>
+                <button type="submit" class="submit-button">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Status Check Modal -->
+    <div id="statusModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeStatusModal()">&times;</span>
+            <h2>Check Application Status</h2>
+            <div class="status-form">
+                <input type="email" id="statusEmail" placeholder="Enter your email address">
+                <button onclick="checkStatus()">Check Status</button>
+            </div>
+            <div id="statusResult" class="status-result"></div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSuccessModal()">&times;</span>
+            <h2>Application Submitted!</h2>
+            <p>Thank you for your application. You can check your status anytime using your email address.</p>
+            <button onclick="closeSuccessModal()" class="modal-button">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
